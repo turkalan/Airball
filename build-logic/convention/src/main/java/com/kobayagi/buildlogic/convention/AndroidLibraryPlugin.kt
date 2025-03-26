@@ -10,8 +10,8 @@ class AndroidLibraryPlugin: Plugin<Project> {
         }
     }
 
-    private fun applyPlugins(project: Project) = with(project.pluginManager) {
-        apply {
+    private fun applyPlugins(project: Project) = with(project) {
+        pluginManager.apply {
             apply("com.android.library")
             apply("kotlin-android")
         }

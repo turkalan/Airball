@@ -16,6 +16,9 @@ tasks {
 
 gradlePlugin {
     plugins {
-
+        register("AndroidLibraryPlugin") {
+            id = "airball.android.library.plugin"
+            implementationClass = "AndroidLibraryConventionPlugin"
+        }
     }
 }
