@@ -18,14 +18,14 @@ class FeatureModulePlugin : Plugin<Project> {
     }
 
     private fun Project.configureSourceSet() {
-        kotlin {
-            sourceSets.configureEach {
-                when(name) {
-                    commonMain -> dependencies {
-                        libs.findBundle("koin.compose").get().get().forEach { implementation(it) }
-                    }
-                }
-            }
-        }
+//        kotlin {
+//            sourceSets.configureEach {
+//                when(name) {
+//                    commonMain -> dependencies {
+//                        libs.findBundle("koin.compose").get().get().forEach { implementation(it) }
+//                    }
+//                }
+//            }
+//        }
     }
 }
