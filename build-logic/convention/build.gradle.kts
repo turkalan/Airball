@@ -16,9 +16,21 @@ tasks {
 
 gradlePlugin {
     plugins {
-        register("AndroidLibraryPlugin") {
-            id = "airball.android.library.plugin"
-            implementationClass = "AndroidLibraryConventionPlugin"
+        register("androidLibrary") {
+            id = libs.plugins.globaldizajn.androidLibrary.get().pluginId
+            implementationClass = "AndroidLibraryPlugin"
+        }
+        register("buildVariants") {
+            id = libs.plugins.globaldizajn.buildVariants.get().pluginId
+            implementationClass = "BuildVariantsPlugin"
+        }
+        register("featureModule") {
+            id = libs.plugins.globaldizajn.featureModule.get().pluginId
+            implementationClass = "FeatureModulePlugin"
+        }
+        register("kotlinMultiplatform") {
+            id = libs.plugins.globaldizajn.kotlinMultiplatform.get().pluginId
+            implementationClass = "KotlinMultiplatformPlugin"
         }
     }
 }
