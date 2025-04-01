@@ -35,7 +35,7 @@ class KotlinMultiplatformPlugin: Plugin<Project> {
                 iosSimulatorArm64()
             ).forEach {
                 it.binaries.framework {
-                    baseName = moduleName
+                    baseName = "ComposeApp"
                     isStatic = true
                 }
             }

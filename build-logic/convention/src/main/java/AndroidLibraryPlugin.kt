@@ -25,7 +25,7 @@ class AndroidLibraryPlugin : Plugin<Project> {
             apply("com.android.library")
             apply(libs.findPlugin("kobayagi-kotlinMultiplatform").get().get().pluginId)
             apply(libs.findPlugin("kobayagi-buildVariants").get().get().pluginId)
-//            apply(libs.findPlugin("kotlinSerialization").get().get().pluginId)
+            apply(libs.findPlugin("kotlinSerialization").get().get().pluginId)
         }
     }
 
@@ -35,7 +35,7 @@ class AndroidLibraryPlugin : Plugin<Project> {
                 when(name) {
                     commonMain -> dependencies {
                         implementation(libs.findLibrary("coroutines.core").get().get())
-//                        implementation(libs.findLibrary("kotlinx.serialization").get().get())
+                        implementation(libs.findLibrary("kotlinx.serialization").get().get())
                     }
                 }
             }
