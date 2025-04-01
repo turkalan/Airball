@@ -16,7 +16,7 @@ class KotlinMultiplatformPlugin: Plugin<Project> {
     }
 
     private fun Project.configureSourceSet() {
-       kotlin {
+        kotlin {
             sourceSets.configureEach {
                 when (name) {
                     commonMain -> dependencies {

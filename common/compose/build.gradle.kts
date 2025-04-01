@@ -2,8 +2,12 @@ import org.jetbrains.compose.ExperimentalComposeLibrary
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
-    alias(libs.plugins.globaldizajn.featureModule)
-    alias(libs.plugins.globaldizajn.kotlinMultiplatform)
+    alias(libs.plugins.kobayagi.featureModule)
+    alias(libs.plugins.kobayagi.kotlinMultiplatform)
+}
+
+android {
+    namespace = "com.kobayagi.airball.common.compose"
 }
 
 kotlin {
@@ -35,10 +39,4 @@ kotlin {
             api(libs.kotlinx.coroutines.swing)
         }
     }
-}
-
-dependencies {
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.material)
 }

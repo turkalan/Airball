@@ -13,24 +13,24 @@ class BuildVariantsPlugin : Plugin<Project> {
             configureVariants(project.extensions.getByType(LibraryExtension::class.java))
         }
     }
-    
+
     private fun configureVariants(extension: TestedExtension) {
         when (extension) {
             is AppExtension -> {
                 // place to add flavors
-               extension.apply { 
-                   buildTypes {
-                       getByName(DEBUG_BUILD_TYPE) {
-                           isMinifyEnabled = false
-                           isDebuggable = true
-                       }
-                       getByName(RELEASE_BUILD_TYPE) {
-                           isMinifyEnabled = true
-                           isShrinkResources = true
-                           isDebuggable = false
-                       }
-                   }
-               }
+                extension.apply {
+                    buildTypes {
+                        getByName(DEBUG_BUILD_TYPE) {
+                            isMinifyEnabled = false
+                            isDebuggable = true
+                        }
+                        getByName(RELEASE_BUILD_TYPE) {
+                            isMinifyEnabled = true
+                            isShrinkResources = true
+                            isDebuggable = false
+                        }
+                    }
+                }
             }
             else -> Unit
         }

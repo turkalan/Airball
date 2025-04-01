@@ -30,3 +30,7 @@ includeBuild("build-logic")
 
 include(":composeApp")
 include(":common:compose")
+include(":common:core")
+include(":core")
+include(":feature:authorization")
+

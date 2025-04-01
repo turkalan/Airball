@@ -3,7 +3,7 @@
 minSdk = "26"
 targetSdk = "35"
 compileSdk = "35"
-applicationId = "hr.globaldizajn.globalodmorko"
+applicationId = "com.kobayagi.airball"
 versionCode = "1"
 versionName = "1.0.0"
 
@@ -43,12 +43,12 @@ junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 appcompatVersion = "1.7.0"
+materialVersion = "1.12.0"
 
 [libraries]
 # Android
 android-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
-androidx-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-lifecycle-viewmodel = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "androidLifecycle" }
 androidx-lifecycle-viewmodel-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "androidLifecycle" }
 androidx-lifecycle-runtime-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidLifecycle" }
@@ -72,9 +72,10 @@ ktor-client-auth = { group = "io.ktor", name = "ktor-client-auth", version.ref =
 #Koin
 koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
 koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
+koin-androidx-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin" }
 koin-compose = { group = "io.insert-koin", name = "koin-compose", version.ref = "koin" }
 koin-compose-viewmodel = { group = "io.insert-koin", name = "koin-compose-viewmodel", version.ref = "koin" }
-koin-androidx-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin" }
+koin-compose-viewmodel-navigation = { module = "io.insert-koin:koin-compose-viewmodel-navigation", version.ref = "koin" }
 
 #Coil
 coil-compose = { group = "io.coil-kt.coil3", name = "coil-compose", version.ref = "coil3" }
@@ -99,10 +100,11 @@ junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompatVersion" }
+material = { group = "com.google.android.material", name = "material", version.ref = "materialVersion" }
 
 [bundles]
 kotlin = ["kotlinx-dateTime", "coroutines-core", "kotlinx-serialization"]
-koin = ["koin-core", "koin-android", "koin-compose", "koin-androidx-compose", "koin-compose-viewmodel"]
+koin-compose = ["koin-compose", "koin-compose-viewmodel", "koin-compose-viewmodel-navigation"]
 coil = ["coil-compose", "coil-compose-core", "coil-network-ktor2", "coil-network-ktor3", "coil-mp"]
 ktor = [
     "ktor-client-core",
@@ -123,7 +125,7 @@ kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 
-globaldizajn-androidLibrary = { id = "hr.globaldizajn.globalodmorko.android.library" }
-globaldizajn-kotlinMultiplatform = { id = "hr.globaldizajn.globalodmorko.kotlin.multiplatform" }
-globaldizajn-featureModule = { id = "hr.globaldizajn.globalodmorko.feature.module" }
-globaldizajn-buildVariants = { id = "hr.globaldizajn.globalodmorko.build.variants" }
+kobayagi-kotlinMultiplatform = { id = "com.kobayagi.airball.kotlin.multiplatform" }
+kobayagi-androidLibrary = { id = "com.kobayagi.airball.android.library" }
+kobayagi-featureModule = { id = "com.kobayagi.airball.feature.module" }
+kobayagi-buildVariants = { id = "com.kobayagi.airball.build.variants" }
