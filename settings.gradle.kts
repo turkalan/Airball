@@ -34,3 +34,4 @@ include(":common:core")
 include(":core")
 include(":feature:authorization")
 
+include(":network")
