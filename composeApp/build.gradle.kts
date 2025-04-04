@@ -24,6 +24,7 @@ kotlin {
             implementation(projects.common.core)
             implementation(projects.core)
             implementation(projects.feature.authorization)
+            implementation(projects.network)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
             implementation(libs.koin.core)

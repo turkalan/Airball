@@ -14,7 +14,7 @@ import kotlinx.coroutines.ensureActive
 import kotlin.coroutines.coroutineContext
 
 suspend inline fun <reified T> safeCall(
-    crossinline execute: () -> HttpResponse,
+    execute: () -> HttpResponse,
 ): Either<Error, T> {
     val response = try {
         execute()

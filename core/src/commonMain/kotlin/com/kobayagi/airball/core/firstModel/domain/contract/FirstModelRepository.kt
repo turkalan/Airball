@@ -6,5 +6,5 @@ import com.kobayagi.airball.common.core.errorhandling.Error
 import com.kobayagi.airball.core.firstModel.domain.model.contract.FirstModel
 
 interface FirstModelRepository {
-    fun getFirstModel(): Either<Error, FirstModel>
+    suspend fun getFirstModel(): Either<Error, FirstModel>
 }

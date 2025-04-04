@@ -9,7 +9,7 @@ import com.kobayagi.airball.core.firstModel.domain.model.contract.FirstModel
 class FirstModelUseCaseImpl(
     private val repository: FirstModelRepository,
 ): FirstModelUseCase {
-    override fun getFirstModel(): Either<Error, FirstModel> {
+    override suspend fun getFirstModel(): Either<Error, FirstModel> {
         return repository.getFirstModel()
     }
 }
