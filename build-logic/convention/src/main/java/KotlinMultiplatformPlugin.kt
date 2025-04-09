@@ -1,6 +1,5 @@
 import extensions.kotlin
 import extensions.libs
-import extensions.moduleName
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 

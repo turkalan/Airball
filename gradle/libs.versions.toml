@@ -38,12 +38,6 @@ coil3 = "3.0.0-rc02"
 ksp = "2.1.20-1.0.31"
 #SqlDelight
 sqlDelight = "2.0.2"
-coreKtx = "1.15.0"
-junit = "4.13.2"
-junitVersion = "1.2.1"
-espressoCore = "3.6.1"
-appcompatVersion = "1.7.0"
-materialVersion = "1.12.0"
 
 [libraries]
 # Android
@@ -95,12 +89,6 @@ jetbrains-compose-navigation = { group = "org.jetbrains.androidx.navigation", na
 detekt-gradle-plugin = { group = "io.gitlab.arturbosch.detekt", name = "detekt-gradle-plugin", version.ref = "detekt" }
 detekt-ruleset-ktlint = { group = "io.gitlab.arturbosch.detekt", name = "detekt-formatting", version.ref = "detekt" }
 detekt-twitter-compose = { group = "com.twitter.compose.rules", name = "detekt", version.ref = "detektCompose" }
-androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
-junit = { group = "junit", name = "junit", version.ref = "junit" }
-androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
-androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
-androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompatVersion" }
-material = { group = "com.google.android.material", name = "material", version.ref = "materialVersion" }
 
 [bundles]
 kotlin = ["kotlinx-dateTime", "coroutines-core", "kotlinx-serialization"]
